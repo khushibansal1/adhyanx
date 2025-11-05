@@ -1,13 +1,15 @@
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ServicesSection from './ServicesSection';
-
-export default function HomePage() {
+interface HomePageProps {
+  onNavigate: (page: string, planType?: string) => void;
+}
+export default function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="min-h-screen">
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
+      <ServicesSection onNavigate={onNavigate} />
     </div>
   );
 }

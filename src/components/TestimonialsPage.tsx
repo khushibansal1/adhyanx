@@ -16,34 +16,38 @@ interface Testimonial {
   image?: string;
   email?: string;
 }
+interface TestimonialProps {
+  onNavigate: (page: string, planType?: string) => void;
+}
 
-export default function TestimonialsPage() {
+
+export default function TestimonialsPage({ onNavigate }: TestimonialProps) {
 
   const initialTestimonials: Testimonial[] = [
-    {
-      id: "1",
-      name: "Emma van der Berg",
-      role: "student",
-      rating: 5,
-      text: "AdhyanX Guidance transformed my understanding of calculus. I went from struggling with derivatives to confidently solving complex integration problems. My IB Math HL score improved dramatically!",
-      avatar: "E"
-    },
-    {
-      id: "2",
-      name: "Luca Rossi",
-      role: "student",
-      rating: 5,
-      text: "The personalized approach really made the difference. My tutor didn't just teach formulas - they helped me understand the concepts behind them. Physics became my strongest subject!",
-      avatar: "L"
-    },
-    {
-      id: "3",
-      name: "Sophia Ahmed",
-      role: "parent",
-      rating: 5,
-      text: "My child was completely lost in organic chemistry. The tailored learning plan broke everything down into manageable steps. Now he is considering chemistry in university!",
-      avatar: "S"
-    }
+    // {
+    //   id: "1",
+    //   name: "Emma van der Berg",
+    //   role: "student",
+    //   rating: 5,
+    //   text: "AdhyanX Guidance transformed my understanding of calculus. I went from struggling with derivatives to confidently solving complex integration problems. My IB Math HL score improved dramatically!",
+    //   avatar: "E"
+    // },
+    // {
+    //   id: "2",
+    //   name: "Luca Rossi",
+    //   role: "student",
+    //   rating: 5,
+    //   text: "The personalized approach really made the difference. My tutor didn't just teach formulas - they helped me understand the concepts behind them. Physics became my strongest subject!",
+    //   avatar: "L"
+    // },
+    // {
+    //   id: "3",
+    //   name: "Sophia Ahmed",
+    //   role: "parent",
+    //   rating: 5,
+    //   text: "My child was completely lost in organic chemistry. The tailored learning plan broke everything down into manageable steps. Now he is considering chemistry in university!",
+    //   avatar: "S"
+    // }
   ];
 
   // Sort testimonials by rating (highest first)
@@ -420,10 +424,10 @@ export default function TestimonialsPage() {
               Join hundreds of students who have transformed their academic performance with personalized tutoring.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium py-4 px-8 rounded-lg hover:from-yellow-600 hover:to-orange-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Book a Free Consultation
+              <button onClick={() => onNavigate('contact','free')}className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium py-4 px-8 rounded-lg hover:from-yellow-600 hover:to-orange-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Book Free Session
               </button>
-              <button className="border-2 border-yellow-500 text-yellow-600 font-medium py-4 px-8 rounded-lg hover:bg-yellow-50 transition-all duration-300">
+              <button onClick={() => onNavigate('pricing')} className="border-2 border-yellow-500 text-yellow-600 font-medium py-4 px-8 rounded-lg hover:bg-yellow-50 transition-all duration-300">
                 View Pricing Plans
               </button>
             </div>

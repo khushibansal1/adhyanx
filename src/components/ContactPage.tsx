@@ -159,14 +159,14 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
                       </div>
                       <div>
                         <h4 className="text-gray-800 mb-2">Email Us</h4>
-                        <a href="mailto:info@adhyanxguidance.com" className="text-gray-600 hover:text-yellow-600 transition-colors">
-                          info@adhyanxguidance.com
+                        <a href="mailto:info@adhyanx.com" className="text-gray-600 hover:text-yellow-600 transition-colors">
+                          info@adhyanx.com
                         </a>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-400 shadow-lg hover:shadow-xl">
+                  {/* <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-400 shadow-lg hover:shadow-xl">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
                         <Phone className="w-6 h-6 text-blue-600" />
@@ -178,7 +178,7 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
                         </a>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-600 shadow-lg hover:shadow-xl">
                     <div className="flex items-start gap-4">
@@ -192,7 +192,7 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
                     </div>
                   </div>
 
-                  <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-800 shadow-lg hover:shadow-xl">
+                  {/* <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-800 shadow-lg hover:shadow-xl">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-purple-500/30 transition-colors">
                         <Clock className="w-6 h-6 text-purple-600" />
@@ -203,22 +203,9 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
                         <p className="text-gray-600">Sat-Sun: 10AM-6PM</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-
-                {/* Free Consultation CTA */}
-                <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 p-6 rounded-xl border border-yellow-500/30 animate-fade-in-up animation-delay-1000 shadow-lg">
-                  <div className="flex items-center gap-3 mb-3">
-                    <MessageSquare className="w-6 h-6 text-yellow-600" />
-                    <h4 className="text-gray-800">Free 15-Minute Consultation</h4>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Not sure if we're the right fit? Book a free consultation to discuss your needs and goals.
-                  </p>
-                  <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-lg hover:from-yellow-600 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    Book Free Session
-                  </button>
-                </div>
+                
               </div>
 
               {/* Right Column - Contact Form */}
@@ -292,6 +279,7 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
                         <option value="starter">Starter Plan</option>
                         <option value="growth">Growth Plan</option>
                         <option value="elite">Elite Plan</option>
+                        <option value="free">Free Plan</option>
                       </select>
                     </div>
 

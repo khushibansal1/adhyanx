@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import logoImage from 'figma:asset/a7654523732dc57ff3f77a42df3acc9762dbe7cc.png';
+import logoImage from '../assets/logo.png';
 
 interface NavbarProps {
   currentPage: string;
-  onNavigate: (page: string) => void;
+  onNavigate: (page: string, planType?: string) => void;
 }
-
 export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,8 +13,8 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleNavigation = (page: string) => {
-    onNavigate(page);
+  const handleNavigation = (page: string, planType?: string) => {
+    onNavigate(page, planType);
     setIsMenuOpen(false);
   };
 
@@ -108,7 +107,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-2.5 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <button onClick={() => onNavigate('contact', 'free')} className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-2.5 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
               Book Free Session
             </button>
           </div>

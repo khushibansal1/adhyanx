@@ -39,7 +39,7 @@ export default function HeroSection() {
                 <span>Helping students succeed — from brugklas to final exams!</span>
               </div>
             </div>
-            
+{/*             
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-1000">
               <button className="group bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-8 py-4 rounded-xl font-semibold hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2">
                 <span>Start Your Journey</span>
@@ -50,7 +50,7 @@ export default function HeroSection() {
                 View Success Stories
               </button>
             </div>
-            
+             */}
 
           </div>
           

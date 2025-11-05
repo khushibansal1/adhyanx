@@ -68,7 +68,7 @@ export default function App() {
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage />;
+        return <HomePage onNavigate={handleNavigation}/>;
       case 'faq':
         return <FAQPage />;
       case 'contact':
@@ -76,9 +76,9 @@ export default function App() {
       case 'pricing':
         return <PricingPage onNavigate={handleNavigation} />;
       case 'testimonials':
-        return <TestimonialsPage />;
+        return <TestimonialsPage onNavigate={handleNavigation} />;
       default:
-        return <HomePage />;
+        return <HomePage onNavigate={handleNavigation}/>;
     }
   };
 
