@@ -1,7 +1,9 @@
 import { Plus, Minus } from 'lucide-react';
 import { useState } from 'react';
-
-export default function FAQPage() {
+interface FAQPageProps {
+  onNavigate: (page: string, planType?: string) => void;
+}
+export default function FAQPage({onNavigate }: FAQPageProps) {
   const [openItems, setOpenItems] = useState<string[]>([]);
 
   const toggleItem = (id: string) => {
@@ -276,11 +278,8 @@ export default function FAQPage() {
               Don&apos;t hesitate to reach out! We&apos;re here to help you succeed in your academic journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-2.5 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+              <button onClick={() => onNavigate('contact', 'free')} className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-2.5 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Book Free Session
-              </button>
-              <button className="px-8 py-4 border-2 border-yellow-500 text-yellow-600 rounded-xl hover:bg-yellow-500 hover:text-white transform hover:scale-105 transition-all duration-300">
-                Contact Us
               </button>
             </div>
           </div>

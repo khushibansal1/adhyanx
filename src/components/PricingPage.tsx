@@ -129,15 +129,10 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
 
                 {/* CTA Buttons */}
                 <div className="space-y-4">
-                  <button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-4 rounded-xl font-semibold hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl">
+                  <button onClick={() => onNavigate('contact', 'free')} className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-4 rounded-xl font-semibold hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl">
                     Book Free Session
                   </button>
                   
-                  <button 
-                    onClick={() => onNavigate('contact')}
-                    className="w-full bg-gray-100 backdrop-blur-sm text-gray-800 px-6 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all duration-200 shadow-lg hover:shadow-xl">
-                    Contact Us
-                  </button>
                 </div>
               </div>
               

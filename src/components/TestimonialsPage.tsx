@@ -19,8 +19,10 @@ interface Testimonial {
   image?: string;
   email?: string;
 }
-
-export default function TestimonialsPage() {
+interface TestimonialsPageProps {
+  onNavigate: (page: string, planType?: string) => void;
+}
+export default function TestimonialsPage({ onNavigate }: TestimonialsPageProps) {
 
   // const initialTestimonials: Testimonial[] = [
   //   {
@@ -59,7 +61,6 @@ useEffect(() => {
   fetch("https://adhyanx-backend.onrender.com/api/testimonials")
     .then((res) => res.json())
     .then((data) => {
-      console.log("Fetched testimonials:", data);
       if (data.success && Array.isArray(data.data)) {
         setTestimonials(data.data); // data.data should have _id for each testimonial
       } else {
@@ -118,15 +119,15 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   try {
     const res = await axios.post("https://adhyanx-backend.onrender.com/api/testimonials", newTestimonial);
-    console.log("printing res", res);
+    
     if (res.status === 200 || res.status === 201) {
-      toast.success("✅ Testimonial submitted successfully!");
+      toast.success("Testimonial submitted successfully! Thanks for sharing your story.");
 
       const createdTestimonial = res.data;
 
       setTestimonials((prev) => [createdTestimonial, ...prev]);
     } else {
-      toast.error("❌ Failed to submit testimonial. Please try again.");
+      toast.error("Failed to submit testimonial. Please try again.");
     }
   } catch (error) {
     console.error("Error submitting testimonial:", error);
@@ -465,10 +466,10 @@ const handleDelete = async (_id: string) => {
               Join hundreds of students who have transformed their academic performance with personalized tutoring.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium py-4 px-8 rounded-lg hover:from-yellow-600 hover:to-orange-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Book a Free Consultation
+              <button onClick={() => onNavigate('contact', 'free')} className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium py-4 px-8 rounded-lg hover:from-yellow-600 hover:to-orange-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Book Free Session
               </button>
-              <button className="border-2 border-yellow-500 text-yellow-600 font-medium py-4 px-8 rounded-lg hover:bg-yellow-50 transition-all duration-300">
+              <button onClick={() => onNavigate('pricing')} className="border-2 border-yellow-500 text-yellow-600 font-medium py-4 px-8 rounded-lg hover:bg-yellow-50 transition-all duration-300">
                 View Pricing Plans
               </button>
             </div>

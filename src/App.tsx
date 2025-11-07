@@ -70,7 +70,7 @@ export default function App() {
       case 'home':
         return <HomePage onNavigate={handleNavigation}/>;
       case 'faq':
-        return <FAQPage />;
+        return <FAQPage onNavigate={handleNavigation}/>;
       case 'contact':
         return <ContactPage selectedPlan={selectedPlan} />;
       case 'pricing':
