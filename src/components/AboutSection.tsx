@@ -29,7 +29,7 @@ export default function AboutSection() {
               
               <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                 <p className="animate-fade-in-up animation-delay-600">
-                  We are a team of <span className="text-yellow-400 font-semibold">passionate educators</span> dedicated to helping high schoolers across the Netherlands succeed — not just in school, but in life. Whether you're preparing for your final exams, struggling with a tough subject, or aiming for top grades, we're here to support your journey.
+                  We are a team of <span className="text-yellow-400 font-semibold">passionate educators</span> helping high schoolers across the Netherlands succeed — in school and beyond. Whether you’re preparing for exams, tackling tough subjects, or aiming for top grades, we’re here to guide you.
                 </p>
                 
                 <p className="animate-fade-in-up animation-delay-800">

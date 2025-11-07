@@ -8,7 +8,7 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
     {
       icon: <GraduationCap className="h-8 w-8" />,
       title: "Dutch and IB Curriculum Experts",
-      description: "Providing support to students for over 10 years, our tutors know the IB curriculum and Dutch school system inside and out — from VMBO to HAVO to VWO. We tailor our support to your level and your learning style.",
+      description: "With over 10 years of experience, our tutors know the IB curriculum and Dutch school system — from VMBO to HAVO to VWO — inside and out. We tailor our support to your level and learning style.",
       iconColor: "text-yellow-600",
       bgColor: "bg-yellow-500/20",
       borderColor: "border-yellow-500/30"
@@ -16,7 +16,7 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
     {
       icon: <User className="h-8 w-8" />,
       title: "One-on-One Session with a Customized Learning Plan",
-      description: "We create personalized study plans based on your goals, level, and learning pace. Whether your child is struggling with a specific subject or aiming for excellence, we offer the guidance and support they need to succeed.",
+      description: "We create personalized study plans based on each student’s goals and pace. Whether your child needs extra help or aims for excellence, we provide the support they need to succeed.",
       iconColor: "text-blue-600",
       bgColor: "bg-blue-500/20",
       borderColor: "border-blue-500/30"
@@ -24,7 +24,7 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
     {
       icon: <BookOpen className="h-8 w-8" />,
       title: "Eindexamen Preparation",
-      description: "Specialized coaching to prepare you for the final IB Diploma Programme (DP), Centrale Eindexamens (CE) and Schoolonderzoeken (SE). Our tutors provide past paper practice, exam strategies, time management techniques, and in-depth revision sessions aligned with the Dutch examination framework.",
+      description: "Specialized coaching for DP, CE, and SE exams with past paper practice, smart strategies, and focused revision aligned with the Dutch system.",
       iconColor: "text-green-600",
       bgColor: "bg-green-500/20",
       borderColor: "border-green-500/30"
@@ -40,7 +40,7 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
     {
       icon: <Trophy className="h-8 w-8" />,
       title: "Top-Performing Tutors",
-      description: "All our tutors are either experienced teachers or high-achieving university students who've been exactly where you are now. They explain concepts clearly, offer practical tips, and help you feel confident again.",
+      description: "Our tutors are experienced teachers or top university students who’ve been where you are. They explain concepts clearly, share practical tips, and build your confidence.",
       iconColor: "text-orange-600",
       bgColor: "bg-orange-500/20",
       borderColor: "border-orange-500/30"
