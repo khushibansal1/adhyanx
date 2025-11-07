@@ -118,7 +118,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   try {
     const res = await axios.post("https://adhyanx-backend.onrender.com/api/testimonials", newTestimonial);
-
+    console.log("printing res", res);
     if (res.status === 200 || res.status === 201) {
       toast.success("✅ Testimonial submitted successfully!");
 
