@@ -7,7 +7,7 @@ import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { useEffect } from 'react';
 import axios from 'axios';
-import toast from "react-hot-toast";
+import { toast } from 'sonner@2.0.3';
 
 interface Testimonial {
   _id: string;
