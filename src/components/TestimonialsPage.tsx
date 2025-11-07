@@ -67,7 +67,8 @@ useEffect(() => {
         setTestimonials([]);
       }
     })
-    .catch((error) => console.error("Error fetching testimonials:", error));
+    .catch((error) => console.error("Error fetching testimonials:", error))
+    .finally(()=> setLoading(false));
 }, []);
 
 
