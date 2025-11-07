@@ -33,7 +33,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
               className="h-12 w-12 object-contain"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-semibold text-white tracking-tight">
+              <span className="text-xl font-semibold text-white tracking-tight text-left">
                 AdhyanX
               </span>
               <span className="text-xs text-yellow-400 font-medium tracking-wide">
