@@ -79,12 +79,12 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Content */}
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center px-6 py-3 bg-yellow-500/20 text-yellow-700 rounded-full font-medium border border-yellow-500/40 mb-8 animate-fade-in-down">
+              {/* <div className="inline-flex items-center px-6 py-3 bg-yellow-500/20 text-yellow-700 rounded-full font-medium border border-yellow-500/40 mb-8 animate-fade-in-down">
                 💰 Choose Your Learning Journey
-              </div>
+              </div> */}
               
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent mb-6 animate-fade-in-up">
-                Pricing
+                Offers
               </h1>
               
               <p className="text-xl text-gray-600 mb-12 animate-fade-in-up animation-delay-400">

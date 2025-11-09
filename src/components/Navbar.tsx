@@ -74,7 +74,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
                 currentPage === 'pricing' ? 'text-yellow-400' : 'text-gray-300 hover:text-yellow-400'
               }`}
             >
-              Pricing
+              Offers
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-yellow-400 transition-all duration-300 ${
                 currentPage === 'pricing' ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></span>
