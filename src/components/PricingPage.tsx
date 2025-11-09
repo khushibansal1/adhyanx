@@ -9,8 +9,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
     {
       name: "Starter Plan",
       icon: Users,
-      price: "€40",
-      period: "per session",
+      price: "€35",
+      period: "per week",
       description: "Perfect for trying out our teaching approach",
       features: [
         "1-on-1 session",
@@ -25,8 +25,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
     {
       name: "Growth Plan", 
       icon: Target,
-      price: "€140",
-      period: "per month",
+      price: "€60",
+      period: "per week",
       description: "Ideal for consistent academic progress",
       features: [
         "1-on-1 session",
@@ -44,8 +44,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
     {
       name: "Elite Plan",
       icon: Crown, 
-      price: "€240",
-      period: "per month",
+      price: "€75",
+      period: "per week",
       description: "For dedicated learners seeking excellence",
       features: [
         "1-on-1 session",
