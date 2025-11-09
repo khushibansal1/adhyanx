@@ -14,7 +14,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
       description: "Perfect for trying out our teaching approach",
       features: [
         "1-on-1 session",
-        "1 per session",
+        "1 session per week",
+        "€35 per session",
         "60 minutes duration", 
         "Standard learning plan",
         "General goals"
@@ -30,13 +31,13 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
       description: "Ideal for consistent academic progress",
       features: [
         "1-on-1 session",
-        "4 sessions per month",
-        "€35 per session",
+        "2 sessions per week",
+        "€30 per session: You save 15%",
         "60 minutes duration",
         "Customised learning plan",
         "Specific goals",
         "Free trial session",
-        "Progress Tracking"
+        "Progress Tracking",
       ],
       popular: false,
       color: "yellow"
@@ -49,8 +50,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
       description: "For dedicated learners seeking excellence",
       features: [
         "1-on-1 session",
-        "8 sessions per month",
-        "€30 per session",
+        "3 sessions per week",
+        "€25 per session: You save 30%",
         "60 minutes duration", 
         "Fully Tailored Curriculum",
         "Targeted outcomes",
@@ -187,7 +188,7 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
                           }`} />
                         </div>
                         <h3 className="text-gray-800 mb-2 font-bold group-hover:text-gray-900 transition-colors duration-300">{plan.name}</h3>
-                        <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-700 transition-colors duration-300">{plan.description}</p>
+                        <p className="text-bold text-gray-600 text-sm mb-4 group-hover:text-gray-700 transition-colors duration-300" >{plan.description}</p>
                         <div className="mb-6">
                           <span className={`text-4xl font-bold transition-colors duration-300 ${
                             plan.color === 'yellow' ? 'text-gray-800 group-hover:text-yellow-700' :
@@ -255,13 +256,6 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
               <p className="text-xl text-gray-300 mb-8">
                 Looking for team or group sessions? We also offer customized packages for schools, companies, or learning groups.
               </p>
-              
-              <div className="bg-yellow-500/20 border border-yellow-500/40 rounded-xl p-6 mb-8">
-                <p className="text-yellow-300 font-medium">
-                  👉 Contact us for a custom quote.
-                </p>
-              </div>
-              
               <button 
                 onClick={() => onNavigate('contact')}
                 className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-8 py-3 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">

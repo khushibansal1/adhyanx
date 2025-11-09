@@ -194,7 +194,7 @@ const handleDelete = async (_id: string) => {
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-6 mb-8">
+                {/* <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20 shadow-lg">
                     <div className="text-3xl font-bold text-yellow-600 mb-2">10+</div>
                     <p className="text-sm text-gray-600">Years Experience</p>
@@ -211,7 +211,7 @@ const handleDelete = async (_id: string) => {
                     <div className="text-3xl font-bold text-yellow-600 mb-2">500+</div>
                     <p className="text-sm text-gray-600">Success Stories</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

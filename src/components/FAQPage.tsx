@@ -16,7 +16,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
 
   const faqSections = [
     {
-      title: "💡 General Questions",
+      title: "General Questions",
       icon: "💡",
       questions: [
         {
@@ -38,7 +38,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
     },
     {
       title: "Session & Plan Details",
-      icon: "🧑‍🏫",
+      icon: "📚",
       questions: [
         {
           id: "session-1",
@@ -62,7 +62,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
       ]
     },
     {
-      title: "💳 Payments & Scheduling",
+      title: "Payments & Scheduling",
       icon: "💳",
       questions: [
         {
@@ -88,7 +88,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
       ]
     },
     {
-      title: "👨‍👩‍👧 For Parents",
+      title: "For Parents",
       icon: "👨‍👩‍👧",
       questions: [
         {
@@ -99,7 +99,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
       ]
     },
     {
-      title: "🛠 Technical & Support",
+      title: "Technical & Support",
       icon: "🛠",
       questions: [
         {
@@ -134,10 +134,10 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
             
             {/* Content Side */}
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full mb-6 animate-fade-in-down">
+              {/* <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full mb-6 animate-fade-in-down">
                 <span className="text-2xl">❓</span>
                 <span className="font-medium">Got Questions?</span>
-              </div>
+              </div> */}
               
               <h1 className="mb-6 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent animate-fade-in-down animation-delay-200 text-5xl font-bold">
                 Frequently Asked Questions
@@ -148,7 +148,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
               </p>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-4 animate-fade-in-up animation-delay-600">
+              {/* <div className="grid grid-cols-3 gap-4 animate-fade-in-up animation-delay-600">
                 <div className="text-center p-4 bg-white/80 rounded-xl shadow-sm">
                   <div className="text-2xl font-bold text-yellow-600">15+</div>
                   <div className="text-sm text-gray-600">Questions Answered</div>
@@ -161,7 +161,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
                   <div className="text-2xl font-bold text-yellow-600">100%</div>
                   <div className="text-sm text-gray-600">Clarity Guaranteed</div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Visual Side */}
@@ -178,22 +178,22 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
                 </div>
 
                 {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center shadow-xl animate-bounce-in animation-delay-1200">
+                {/* <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center shadow-xl animate-bounce-in animation-delay-1200">
                   <span className="text-white text-2xl">❓</span>
-                </div>
+                </div> */}
 
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg animate-bounce-in animation-delay-1600">
+                {/* <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg animate-bounce-in animation-delay-1600">
                   <span className="text-white">💡</span>
-                </div>
+                </div> */}
 
                 {/* Question Bubbles */}
-                <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg animate-fade-in-up animation-delay-1000">
+                {/* <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg animate-fade-in-up animation-delay-1000">
                   <p className="text-sm text-gray-700">"How do I book?"</p>
-                </div>
-
+                </div> */}
+{/* 
                 <div className="absolute bottom-20 right-6 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg animate-fade-in-up animation-delay-1400">
                   <p className="text-sm text-gray-700">"What subjects?"</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
