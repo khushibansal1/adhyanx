@@ -41,10 +41,14 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
       }
     }
   }, []);
+  const [highlightPlan, setHighlightPlan] = useState(false);
+
 
   // Set plan type when selectedPlan prop changes
   useEffect(() => {
     if (selectedPlan) {
+      setHighlightPlan(true);
+      setTimeout(() => setHighlightPlan(false), 3000);
       setFormData(prev => ({ ...prev, planType: selectedPlan }));
     }
   }, [selectedPlan]);
@@ -179,11 +183,11 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div className="space-y-8 animate-fade-in-left">
                 <div>
                   {/* Badge */}
-                  <div className="inline-flex items-center px-6 py-3 bg-yellow-500/20 text-yellow-700 rounded-full border border-yellow-500/40 mb-8 animate-fade-in-down">
+                  {/* <div className="inline-flex items-center px-6 py-3 bg-yellow-500/20 text-yellow-700 rounded-full border border-yellow-500/40 mb-8 animate-fade-in-down">
                     📧 Get In Touch
-                  </div>
+                  </div> */}
                   
-                  <h2 className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent mb-6">
+                  <h2 className="font-bold text-4xl bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent mb-6">
                     Let's Connect
                   </h2>
                   <p className="text-gray-600 mb-8 leading-relaxed">
@@ -228,10 +232,11 @@ const handleSubmit = async (e: React.FormEvent) => {
                       </div>
                       <div>
                         <h4 className="text-gray-800 mb-2">Location</h4>
-                        <p className="text-gray-600">Netherlands & Online</p>
+                        <p className="text-gray-600">Meergras 24, 5658 LR Eindhoven</p>
                       </div>
                     </div>
                   </div>
+                  
 
                   {/* <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-800 shadow-lg hover:shadow-xl">
                     <div className="flex items-start gap-4">
@@ -309,19 +314,26 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                     <div>
                       <label className="block text-gray-700 mb-2">Plan Type *</label>
-                      <select 
+                      <select
                         name="planType"
                         value={formData.planType}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg text-gray-800 focus:border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
+                        className={`
+                          w-full px-4 py-3 bg-white/70 border rounded-lg transition-all duration-500
+                          ${highlightPlan 
+                            ? "border-yellow-600 ring-2 ring-yellow-500/40 animate-softPulse" 
+                            : "border-gray-300"
+                          }
+                        `}
                       >
-                        <option value="">Select a plan</option>
-                        <option value="starter">Starter Plan</option>
-                        <option value="growth">Growth Plan</option>
-                        <option value="elite">Elite Plan</option>
-                        <option value="free">Free Plan</option>
-                      </select>
+                      <option value="">Select a plan</option>
+                      <option value="starter">Starter Plan</option>
+                      <option value="growth">Growth Plan</option>
+                      <option value="elite">Elite Plan</option>
+                      <option value="free">Free Plan</option>
+                      <option value="custom">Custom Plan</option>
+                    </select>
                     </div>
 
                     <div>

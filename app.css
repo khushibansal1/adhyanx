@@ -1,0 +1,18 @@
+@keyframes softPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.5); /* yellow-500 */
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px rgba(234, 179, 8, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.5);
+  }
+}
+
+.animate-softPulse {
+  animation: softPulse 0.8s ease-in-out infinite;
+}

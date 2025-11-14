@@ -210,7 +210,13 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
                                 plan.color === 'purple' ? 'text-purple-600' : 'text-blue-600'
                               }`} />
                             </div>
-                            <span className="text-gray-700">{feature}</span>
+                            {(feature.includes("€30 per session: You save 15%") ||feature.includes("€25 per session: You save 30%") || feature.includes("€35 per session")) ? (
+                              <span className="font-semibold text-yellow-900 bg-gradient-to-r from-yellow-100 to-orange-100 px-2 py-1 rounded-md shadow-sm">
+                                {feature}
+                              </span>
+                            ) : (
+                              <span className="text-gray-700">{feature}</span>
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -257,7 +263,7 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
                 Looking for team or group sessions? We also offer customized packages for schools, companies, or learning groups.
               </p>
               <button 
-                onClick={() => onNavigate('contact')}
+                onClick={() => onNavigate('contact', 'custom')}
                 className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-8 py-3 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Get Custom Quote
               </button>
@@ -265,8 +271,6 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
           </div>
         </div>
       </section>
-
-
     </div>
   );
 }

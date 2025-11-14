@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Linkedin, Youtube, ArrowRight, BookOpen, Calculator, Atom } from 'lucide-react';
-import logoImage from 'figma:asset/a7654523732dc57ff3f77a42df3acc9762dbe7cc.png';
+import logoImage from '../assets/logo.png';
+import kvkImage from '../assets/kvk.png';
 
 interface FooterProps {
     onNavigate: (page: string, planType?: string) => void;
@@ -38,7 +39,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 className="h-12 w-12 object-contain"
               />
               <div className="flex flex-col">
-                <span className="text-xl font-semibold text-white tracking-tight">
+                <span className="text-xl font-semibold text-white tracking-tight text-left">
                   AdhyanX
                 </span>
                 <span className="text-xs text-yellow-400 font-medium tracking-wide">
@@ -135,8 +136,16 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <div>
                   <div className="text-sm font-medium text-white">Location</div>
                   <div className="text-gray-300">
-                    Netherlands<br />
-                    <span className="text-sm text-gray-400">Online tutoring nationwide</span>
+                    Meergras 24, 5658 LR Eindhoven<br />
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <img src={kvkImage} alt="KVK Icon" className="h-6 w-6 mt-0.5" />
+                <div>
+                  <div className="text-sm font-medium text-white">KVK Number</div>
+                  <div className="text-gray-300">
+                    98096869<br />
                   </div>
                 </div>
               </div>

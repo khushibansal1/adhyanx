@@ -16,9 +16,9 @@ export default function AboutSection() {
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-yellow-500/20 text-yellow-300 rounded-full text-sm font-medium border border-yellow-500/40 animate-fade-in-down animation-delay-200">
+              {/* <div className="inline-flex items-center px-4 py-2 bg-yellow-500/20 text-yellow-300 rounded-full text-sm font-medium border border-yellow-500/40 animate-fade-in-down animation-delay-200">
                 👥 Meet Our Team
-              </div>
+              </div> */}
               
               <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight animate-fade-in-up animation-delay-400">
                 Who{' '}
@@ -95,19 +95,19 @@ export default function AboutSection() {
             </div>
             
             {/* Floating Achievement Badges */}
-            <div className="absolute -top-4 -left-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full shadow-xl animate-bounce-in animation-delay-800">
+            {/* <div className="absolute -top-4 -left-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full shadow-xl animate-bounce-in animation-delay-800">
               <div className="flex items-center space-x-2">
                 <Award className="h-4 w-4" />
                 <span className="font-semibold text-sm">10+ Years</span>
               </div>
-            </div>
+            </div> */}
             
-            <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full shadow-xl animate-bounce-in animation-delay-1200">
-              <div className="flex items-center space-x-2">
-                <Users className="h-4 w-4" />
-                <span className="font-semibold text-sm">500+ Students</span>
-              </div>
-            </div>
+            {/* <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full shadow-xl animate-bounce-in animation-delay-1200"> */}
+              {/* <div className="flex items-center space-x-2"> */}
+                {/* <Users className="h-4 w-4" /> */}
+                {/* <span className="font-semibold text-sm">500+ Students</span> */}
+              {/* </div> */}
+            {/* </div> */}
             
             {/* Decorative Elements */}
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-500/10 rounded-full blur-xl"></div>

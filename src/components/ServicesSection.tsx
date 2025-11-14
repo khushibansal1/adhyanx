@@ -66,10 +66,10 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 space-y-6 animate-fade-in-up">
-          <div className="inline-flex items-center px-4 py-2 bg-yellow-500/20 text-yellow-700 rounded-full text-sm font-medium border border-yellow-500/40 animate-fade-in-down animation-delay-200">
+          {/* <div className="inline-flex items-center px-4 py-2 bg-yellow-500/20 text-yellow-700 rounded-full text-sm font-medium border border-yellow-500/40 animate-fade-in-down animation-delay-200">
             🎯 Our Services
           </div>
-          
+           */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-up animation-delay-400">
             What Do We{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-800">
