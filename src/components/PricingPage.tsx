@@ -7,11 +7,11 @@ interface PricingPageProps {
 export default function PricingPage({ onNavigate }: PricingPageProps) {
   const plans = [
     {
-      name: "Starter Plan",
+      name: "Base Plan",
       icon: Users,
       price: "€35",
       period: "per week",
-      description: "Perfect for trying out our teaching approach",
+      description: "Establish strong learning outcomes",
       features: [
         "1-on-1 session",
         "1 session per week",

@@ -74,7 +74,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </button>
               <button onClick={() => onNavigate('pricing')} className="block text-gray-300 hover:text-yellow-400 transition-colors duration-200 flex items-center group">
                 <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
-                Pricing
+                Offers
               </button>
               <button onClick={() => onNavigate('faq')} className="block text-gray-300 hover:text-yellow-400 transition-colors duration-200 flex items-center group">
                 <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -95,7 +95,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Calculator className="h-5 w-5 text-yellow-400" />
                 <div>
                   <div className="font-medium text-white text-sm">Mathematics</div>
-                  <div className="text-xs text-gray-400">All levels & IB</div>
+                  {/* <div className="text-xs text-gray-400">All levels & IB</div> */}
                 </div>
               </div>
               
@@ -103,7 +103,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Atom className="h-5 w-5 text-green-400" />
                 <div>
                   <div className="font-medium text-white text-sm">Physics</div>
-                  <div className="text-xs text-gray-400">VMBO, HAVO, VWO</div>
+                  {/* <div className="text-xs text-gray-400">VMBO, HAVO, VWO</div> */}
                 </div>
               </div>
               
@@ -111,7 +111,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <BookOpen className="h-5 w-5 text-purple-400" />
                 <div>
                   <div className="font-medium text-white text-sm">Chemistry</div>
-                  <div className="text-xs text-gray-400">All curricula</div>
+                  {/* <div className="text-xs text-gray-400">All curricula</div> */}
                 </div>
               </div>
             </div>
