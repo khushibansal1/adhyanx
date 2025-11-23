@@ -102,15 +102,15 @@ export default function HeroSection() {
               </div>
               
               {/* Success Metrics */}
-              <div className="border-t border-yellow-500/20 pt-6">
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div className="space-y-2 animate-scale-in animation-delay-1400">
+              {/* <div className="border-t border-yellow-500/20 pt-6">
+                <div className="grid grid-cols-3 gap-4 text-center"> */}
+                  {/* <div className="space-y-2 animate-scale-in animation-delay-1400">
                     <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center mx-auto">
                       <CheckCircle className="h-5 w-5 text-green-400" />
                     </div>
                     <div className="text-lg font-bold text-gray-900">✓</div>
                     <div className="text-xs text-gray-600">Quality Teaching</div>
-                  </div>
+                  </div> */}
 {/*                   
                   <div className="space-y-2 animate-scale-in animation-delay-1600">
                     <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto">
@@ -127,8 +127,8 @@ export default function HeroSection() {
                     <div className="text-lg font-bold text-gray-900">4.9</div>
                     <div className="text-xs text-gray-600">Student Rating</div>
                   </div> */}
-                </div>
-              </div>
+                {/* </div>
+              </div> */}
             </div>
             
             {/* Floating Success Badge */}

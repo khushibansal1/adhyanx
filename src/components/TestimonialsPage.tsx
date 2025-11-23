@@ -467,8 +467,8 @@ const handleDelete = async (_id: string) => {
               Join hundreds of students who have transformed their academic performance with personalized tutoring.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => onNavigate('contact', 'free')} className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium py-4 px-8 rounded-lg hover:from-yellow-600 hover:to-orange-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Book Free Session
+              <button onClick={() => onNavigate('contact', 'demo')} className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium py-4 px-8 rounded-lg hover:from-yellow-600 hover:to-orange-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Book a demo Session
               </button>
               <button onClick={() => onNavigate('pricing')} className="border-2 border-yellow-500 text-yellow-600 font-medium py-4 px-8 rounded-lg hover:bg-yellow-50 transition-all duration-300">
                 View Pricing Plans

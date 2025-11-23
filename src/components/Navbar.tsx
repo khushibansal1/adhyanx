@@ -107,8 +107,8 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <button onClick={() => onNavigate('contact', 'free')} className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-2.5 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
-              Book Free Session
+            <button onClick={() => onNavigate('contact', 'demo')} className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-2.5 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+              Book a demo Session
             </button>
           </div>
 
@@ -172,7 +172,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             </button>
             
             <button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-3 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transition-all duration-200 mt-4">
-              Book Free Session
+              Book a demo Session
             </button>
           </div>
         </div>
