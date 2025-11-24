@@ -150,7 +150,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
                 currentPage === 'pricing' ? 'text-yellow-400' : 'text-gray-300 hover:text-yellow-400'
               }`}
             >
-              Pricing
+              Offers
             </button>
             
             <button 

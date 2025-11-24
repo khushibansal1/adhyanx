@@ -130,7 +130,7 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button onClick={() => onNavigate('contact', 'demo')} className="group bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-8 py-4 rounded-xl font-semibold hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2">
                 <span>Book a demo Session</span>
-                <div className="w-2 h-2 bg-slate-900 rounded-full group-hover:animate-ping"></div>
+                {/* <div className="w-2 h-2 bg-slate-900 rounded-full group-hover:animate-ping"></div> */}
               </button>
 {/*               
               <button className="bg-gray-100 backdrop-blur-sm text-gray-800 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all duration-200 shadow-lg hover:shadow-xl">

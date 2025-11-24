@@ -471,7 +471,7 @@ const handleDelete = async (_id: string) => {
                 Book a demo Session
               </button>
               <button onClick={() => onNavigate('pricing')} className="border-2 border-yellow-500 text-yellow-600 font-medium py-4 px-8 rounded-lg hover:bg-yellow-50 transition-all duration-300">
-                View Pricing Plans
+                View our Offers
               </button>
             </div>
           </div>
