@@ -50,7 +50,7 @@ export default function FloatingInfo() {
       </button>
 
       🎉 <strong>Refer a friend</strong> and get{' '}
-      <strong>extra 20% off</strong> for the next 2 weeks
+      <strong>extra 20% off</strong> for 2 weeks
     </div>
   );
 }
