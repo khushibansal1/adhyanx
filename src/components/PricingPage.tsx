@@ -1,4 +1,5 @@
 import { Check, Star, Users, Target, Crown, MessageSquare, Calendar, BarChart3 } from 'lucide-react';
+import FloatingInfo from './FloatingInfo';
 
 interface PricingPageProps {
   onNavigate: (page: string, planType?: string) => void;
@@ -270,6 +271,7 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
             </div>
           </div>
         </div>
+        <FloatingInfo />
       </section>
     </div>
   );

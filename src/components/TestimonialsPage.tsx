@@ -19,6 +19,50 @@ interface Testimonial {
   image?: string;
   email?: string;
 }
+
+const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  {
+    _id: "fallback-6935fb25",
+    name: "Khushal",
+    email: "khushal.dasari778@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "I could understand the theory a lot better.",
+    avatar: "K",
+    image: ""
+  },
+  {
+    _id: "fallback-6935fe92",
+    name: "Deniz Dasdemir",
+    email: "deniz.dasdemir@hotmail.com",
+    role: "student",
+    rating: 5,
+    text: "I was incredibly happy with Vimanyu’s teaching style. He explained everything clearly and made complex concepts easy to grasp.",
+    avatar: "D",
+    image: ""
+  },
+  {
+    _id: "fallback-6936e802",
+    name: "Ninaad Patel",
+    email: "Ninaadpatel7@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "The lessons were very helpful. I started to understand the subject much better and gained confidence over time.",
+    avatar: "N",
+    image: ""
+  },
+  {
+    _id: "fallback-69392c71",
+    name: "Shriya Bettadapur",
+    email: "Shriyabsatish@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "He explains really well. He was always well prepared and enthusiastic, which made every class engaging.",
+    avatar: "S",
+    image: ""
+  }
+];
+
 interface TestimonialsPageProps {
   onNavigate: (page: string, planType?: string) => void;
 }
@@ -54,22 +98,54 @@ export default function TestimonialsPage({ onNavigate }: TestimonialsPageProps) 
   // Sort testimonials by rating (highest first)
   // const sortedTestimonials = [...initialTestimonials].sort((a, b) => b.rating - a.rating);
 
-const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+const [testimonials, setTestimonials] = useState<Testimonial[]>(FALLBACK_TESTIMONIALS);
 const [loading, setLoading] = useState(true);
 
+
 useEffect(() => {
+  let isMounted = true;
+
   fetch("https://adhyanx-backend.onrender.com/api/testimonials")
-    .then((res) => res.json())
-    .then((data) => {
+    .then(res => res.json())
+    .then(data => {
+      if (!isMounted) return;
+
       if (data.success && Array.isArray(data.data)) {
-        setTestimonials(data.data); // data.data should have _id for each testimonial
-      } else {
-        setTestimonials([]);
+        const serverTestimonials: Testimonial[] = data.data;
+
+        setTestimonials(prev => {
+          const map = new Map<string, Testimonial>();
+
+          // Step 1: add existing (fallback) testimonials
+          prev.forEach(t => {
+            if (t.email) {
+              map.set(t.email, t);
+            }
+          });
+
+          // Step 2: override/add server testimonials
+          serverTestimonials.forEach(t => {
+            if (t.email) {
+              map.set(t.email, t); // overrides fallback if same email
+            }
+          });
+
+          return Array.from(map.values());
+        });
       }
     })
-    .catch((error) => console.error("Error fetching testimonials:", error))
-    .finally(()=> setLoading(false));
+    .catch(err => {
+      console.warn("Backend sleeping, showing fallback testimonials", err);
+    })
+    .finally(() => {
+      if (isMounted) setLoading(false);
+    });
+
+  return () => {
+    isMounted = false;
+  };
 }, []);
+
 
 
   const [formData, setFormData] = useState({
@@ -126,7 +202,11 @@ const handleSubmit = async (e: React.FormEvent) => {
 
       const createdTestimonial = res.data;
 
-      setTestimonials((prev) => [createdTestimonial, ...prev]);
+      setTestimonials(prev => {
+        const filtered = prev.filter(t => t.email !== createdTestimonial.email);
+        return [createdTestimonial, ...filtered];
+      });
+
     } else {
       toast.error("Failed to submit testimonial. Please try again.");
     }
@@ -407,7 +487,7 @@ const handleDelete = async (_id: string) => {
                   title="Delete testimonial"
                 >
                   <Trash2 className="w-4 h-4 text-red-400 hover:text-white transition-colors duration-300" />
-                </button> */}
+                </button> 
 
                 {/* Profile Picture */}
                 <div className="flex justify-center mb-6">
