@@ -11,7 +11,6 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       <HeroSection />
       <AboutSection />
       <ServicesSection onNavigate={onNavigate} />
-      <FloatingInfo />
     </div>
   );
 }

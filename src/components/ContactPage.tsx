@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Star, BookOpen, Download, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner@2.0.3';
+import FloatingInfo from './FloatingInfo';
 
 interface ContactSubmission {
   id: string;
@@ -386,6 +387,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             </div>
           </div>
         </div>
+        <FloatingInfo />
       </section>
     </div>
   );

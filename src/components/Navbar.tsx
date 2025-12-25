@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoImage from '../assets/logo.png';
+import '../styles/globals.css'; 
 
 interface NavbarProps {
   currentPage: string;
@@ -177,6 +178,17 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
           </div>
         </div>
       </div>
+     {currentPage === 'home' && (
+  <div className="floating-header w-full">
+    <div className="max-w-7xl mx-auto px-4 py-2 text-center text-sm flex items-center justify-center gap-2">
+      <span className="gift-icon">🎁</span>
+      <span className="promo-text">
+        Refer a friend & get
+        <span> extra 25% off for next 2 weeks</span>!
+      </span>
+    </div>
+  </div>
+)}
     </nav>
   );
 }

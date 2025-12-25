@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'sonner@2.0.3';
+import FloatingInfo from './FloatingInfo';
 
 interface Testimonial {
   _id: string;
@@ -250,7 +251,86 @@ const handleDelete = async (_id: string) => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section with form */}
-      <section className="bg-gradient-to-br from-yellow-50 to-orange-100 py-12 lg:py-20 px-6 overflow-hidden relative">
+      {/* Testimonials Carousel Section */}
+      <section className="bg-gradient-to-br from-yellow-50 to-orange-100 py-12 lg:py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full mb-6 animate-fade-in-up">
+              <Star className="w-5 h-5 fill-current" />
+              <span className="font-medium">Student Success Stories</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 animate-fade-in-up animation-delay-200">
+              Transforming Academic
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"> Journeys</span>
+            </h2>
+            <p className="text-black-300 text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
+              Every student's journey is unique. Here are some of the incredible transformations we've been privileged to be part of.
+            </p>
+          </div>
+
+          {/* Grid Layout - 3 per row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in-up animation-delay-400">
+            {Array.isArray(testimonials) && testimonials.map((testimonial: any, index) => (
+              <div
+                key={`${testimonial.id}-${index}`}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-xl shadow-xl border border-slate-700 hover:shadow-yellow-500/30 hover:shadow-2xl hover:border-yellow-500/50 hover:bg-gradient-to-br hover:from-slate-700 hover:to-slate-800 transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col group relative"
+              >
+                
+                {/* Delete Button */}
+                {/* <button
+                  onClick={() => handleDelete(testimonial.id)}
+                  className="absolute top-4 right-4 w-8 h-8 bg-red-500/20 hover:bg-red-500 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 z-10"
+                  title="Delete testimonial"
+                >
+                  <Trash2 className="w-4 h-4 text-red-400 hover:text-white transition-colors duration-300" />
+                </button> 
+
+                {/* Profile Picture */}
+                <div className="flex justify-center mb-6">
+                  {testimonial.image ? (
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-20 h-20 rounded-full object-cover border-3 border-yellow-500 group-hover:border-yellow-400 group-hover:scale-110 transition-all duration-300"
+                    />
+                  ) : (
+                    <Avatar className="w-20 h-20 group-hover:scale-110 transition-transform duration-300">
+                      <AvatarFallback className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-2xl group-hover:from-yellow-400 group-hover:to-orange-400 transition-all duration-300">
+                        {testimonial.avatar}
+                      </AvatarFallback>
+                    </Avatar>
+                  )}
+                </div>
+
+                {/* Name and Role */}
+                <div className="text-center mb-4">
+                  <h4 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300 mb-2">
+                    {testimonial.name}
+                  </h4>
+                  <span className="text-sm text-gray-400 capitalize bg-slate-700 px-3 py-1 rounded-full">
+                    {testimonial.role}
+                  </span>
+                </div>
+
+                {/* Rating */}
+                <div className="flex justify-center gap-1 mb-6">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current group-hover:text-yellow-400 group-hover:scale-110 transition-all duration-300" style={{ transitionDelay: `${i * 50}ms` }} />
+                  ))}
+                </div>
+
+                {/* Testimonial Text */}
+                <div className="flex-grow">
+                  <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300 text-center">
+                    {testimonial.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 px-8 md:px-16 xl:px-6 overflow-hidden relative">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/20 rounded-full mix-blend-multiply filter blur-xl animate-fade-in-down animation-delay-200"></div>
@@ -264,11 +344,12 @@ const handleDelete = async (_id: string) => {
             <div className="relative">
               <div className="animate-fade-in-left">
                 <div className="text-center lg:text-left mb-8">
-                  <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                     Real Success Stories from Our
                     <span className="bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent"> Community</span>
                   </h1>
-                  <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                  <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+
                     Discover how AdhyanX Guidance has transformed students' academic journeys with personalized tutoring in Mathematics, Physics, and Chemistry.
                   </p>
                 </div>
@@ -455,85 +536,7 @@ const handleDelete = async (_id: string) => {
         </div>
       </section>
 
-      {/* Testimonials Carousel Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 px-8 md:px-16 xl:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full mb-6 animate-fade-in-up">
-              <Star className="w-5 h-5 fill-current" />
-              <span className="font-medium">Student Success Stories</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 animate-fade-in-up animation-delay-200">
-              Transforming Academic
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"> Journeys</span>
-            </h2>
-            <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
-              Every student's journey is unique. Here are some of the incredible transformations we've been privileged to be part of.
-            </p>
-          </div>
-
-          {/* Grid Layout - 3 per row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in-up animation-delay-400">
-            {Array.isArray(testimonials) && testimonials.map((testimonial: any, index) => (
-              <div
-                key={`${testimonial.id}-${index}`}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-xl shadow-xl border border-slate-700 hover:shadow-yellow-500/30 hover:shadow-2xl hover:border-yellow-500/50 hover:bg-gradient-to-br hover:from-slate-700 hover:to-slate-800 transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col group relative"
-              >
-                
-                {/* Delete Button */}
-                {/* <button
-                  onClick={() => handleDelete(testimonial.id)}
-                  className="absolute top-4 right-4 w-8 h-8 bg-red-500/20 hover:bg-red-500 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 z-10"
-                  title="Delete testimonial"
-                >
-                  <Trash2 className="w-4 h-4 text-red-400 hover:text-white transition-colors duration-300" />
-                </button> 
-
-                {/* Profile Picture */}
-                <div className="flex justify-center mb-6">
-                  {testimonial.image ? (
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-20 h-20 rounded-full object-cover border-3 border-yellow-500 group-hover:border-yellow-400 group-hover:scale-110 transition-all duration-300"
-                    />
-                  ) : (
-                    <Avatar className="w-20 h-20 group-hover:scale-110 transition-transform duration-300">
-                      <AvatarFallback className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-2xl group-hover:from-yellow-400 group-hover:to-orange-400 transition-all duration-300">
-                        {testimonial.avatar}
-                      </AvatarFallback>
-                    </Avatar>
-                  )}
-                </div>
-
-                {/* Name and Role */}
-                <div className="text-center mb-4">
-                  <h4 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300 mb-2">
-                    {testimonial.name}
-                  </h4>
-                  <span className="text-sm text-gray-400 capitalize bg-slate-700 px-3 py-1 rounded-full">
-                    {testimonial.role}
-                  </span>
-                </div>
-
-                {/* Rating */}
-                <div className="flex justify-center gap-1 mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current group-hover:text-yellow-400 group-hover:scale-110 transition-all duration-300" style={{ transitionDelay: `${i * 50}ms` }} />
-                  ))}
-                </div>
-
-                {/* Testimonial Text */}
-                <div className="flex-grow">
-                  <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300 text-center">
-                    {testimonial.text}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-yellow-50 to-orange-100 py-20 px-6">
@@ -556,6 +559,7 @@ const handleDelete = async (_id: string) => {
             </div>
           </div>
         </div>
+        <FloatingInfo />
       </section>
     </div>
   );
