@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoImage from '../assets/logo.png';
 import '../styles/globals.css'; 
-
+import {  Gift } from 'lucide-react';
 interface NavbarProps {
   currentPage: string;
   onNavigate: (page: string, planType?: string) => void;
 }
 export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [showPromo, setShowPromo] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -178,14 +179,27 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
           </div>
         </div>
       </div>
-     {currentPage === 'home' && (
-  <div className="floating-header w-full">
-    <div className="max-w-7xl mx-auto px-4 py-2 text-center text-sm flex items-center justify-center gap-2">
-      <span className="gift-icon">🎁</span>
-      <span className="promo-text">
-        Refer a friend & get
-        <span> extra 25% off for next 2 weeks</span>!
-      </span>
+     {currentPage === 'home' && showPromo && (
+  <div className="promo-bar">
+    <div className="promo-inner">
+      {/* Left content */}
+      <div className="promo-left">
+        <Gift className="promo-icon" />
+        <span className="promo-text">
+          Refer a Friend and Get
+          <span className="promo-badge">25% OFF</span>
+          on classes for the next two weeks!
+        </span>
+      </div>
+
+      {/* Close button */}
+      <button
+        className="promo-close"
+        onClick={() => setShowPromo(false)}
+        aria-label="Close promo"
+      >
+        <X size={18} />
+      </button>
     </div>
   </div>
 )}
