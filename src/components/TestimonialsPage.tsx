@@ -22,6 +22,46 @@ interface Testimonial {
 }
 
 const FALLBACK_TESTIMONIALS: Testimonial[] = [
+   {
+    _id: "fallback-6935fb26",
+    name: "Suhas Maddali",
+    email: "Suhas.maddali.119@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "I really enjoy his sessions. He explains but also has a small talk with us to kind of give me a break from all the explaining. His explanations are really good. Better than my teachers in my opinion.",
+    avatar: "S",
+    image: ""
+  },
+  {
+    _id: "fallback-6935fe92",
+    name: "Deniz Dasdemir",
+    email: "deniz.dasdemir@hotmail.com",
+    role: "student",
+    rating: 5,
+    text: "I was incredibly happy with Vimanyus teaching style. He explained everything with clear and realistic examples, making it easy for me to understand the material. He's also quite knowledgeable, so if I had quick questions about a minor topic outside of what we were discussing that day, he was able to answer them very well. He also helped answer questions outside of the tutoring days and was always there to help me with any difficulties I had. In short, a top-notch teacher!",
+    avatar: "D",
+    image: ""
+  },
+  {
+    _id: "fallback-6936e802",
+    name: "Ninaad Patel",
+    email: "Ninaadpatel7@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "The lessons were very helpful, i started to understand the subject in a way i understand, very helpful for getting better grades.",
+    avatar: "N",
+    image: ""
+  },
+  {
+    _id: "fallback-69392c71",
+    name: "Shriya Bettadapur",
+    email: "Shriyabsatish@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "He explains really well. He was always well prepared and was enthusiastic about teaching. Very kind. Always ready to answer your questions when in doubt!",
+    avatar: "S",
+    image: ""
+  },
   {
     _id: "fallback-6935fb25",
     name: "Khushal",
@@ -32,36 +72,6 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     avatar: "K",
     image: ""
   },
-  {
-    _id: "fallback-6935fe92",
-    name: "Deniz Dasdemir",
-    email: "deniz.dasdemir@hotmail.com",
-    role: "student",
-    rating: 5,
-    text: "I was incredibly happy with Vimanyu’s teaching style. He explained everything clearly and made complex concepts easy to grasp.",
-    avatar: "D",
-    image: ""
-  },
-  {
-    _id: "fallback-6936e802",
-    name: "Ninaad Patel",
-    email: "Ninaadpatel7@gmail.com",
-    role: "student",
-    rating: 5,
-    text: "The lessons were very helpful. I started to understand the subject much better and gained confidence over time.",
-    avatar: "N",
-    image: ""
-  },
-  {
-    _id: "fallback-69392c71",
-    name: "Shriya Bettadapur",
-    email: "Shriyabsatish@gmail.com",
-    role: "student",
-    rating: 5,
-    text: "He explains really well. He was always well prepared and enthusiastic, which made every class engaging.",
-    avatar: "S",
-    image: ""
-  }
 ];
 
 interface TestimonialsPageProps {
