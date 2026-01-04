@@ -22,6 +22,37 @@ interface Testimonial {
 }
 
 const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  {
+    _id: "fallback-6935fb2711",
+    name: "Kranthi Ramineni",
+    email: "raminenik@gmail.com",
+    role: "parent",
+    rating: 5,
+    text: "Daman was one of Vimanyu’s earliest students. Vimanyu’s teaching skills are exceptional — he is calm, composed, and able to explain topics clearly at the student’s level. He is equally proficient in Mathematics, Physics, and Chemistry, and his flexibility was particularly valuable: he adapted lessons to our needs and was readily available for ad‑hoc sessions. Thanks to his guidance, Daman achieved good grades in Physics and Mathematics. I highly recommend Vimanyu.",
+    avatar: "K",
+    image: ""
+  },
+  {
+    _id: "fallback-6935fb2712",
+    name: "Daman",
+    email: "damanramineni@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "I was one of Vimanyu’s early students, and he helped me really understand Maths, lab calculations and Physics. He explains things clearly, stays calm and patient, and always adapts lessons to what you need. His support helped me gain confidence and improve my results. Vimanyu not only explains the topic but also information around it which makes it really easy to understand. I’d definitely recommend him as a tutor.",
+    avatar: "D",
+    image: ""
+  },
+  {
+    _id: "fallback-6935fb2712",
+    name: "Abhrajit Saha",
+    email: "abhrajitsaha1@gmail.com",
+    role: "student",
+    rating: 5,
+    text: "Vimanyu tutored me in mathematics and physics. I really liked his personalized teaching style. He always adapted to my way of thinking and explained complex concepts in a fun and very understandable way.   ",
+    avatar: "A",
+    image: ""
+  },
+
    {
     _id: "fallback-6935fb26",
     name: "Suhas Maddali",
