@@ -211,6 +211,22 @@ const handleSubmit = async (e: React.FormEvent) => {
                       </div>
                     </div>
                   </div>
+                  <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-400 shadow-lg hover:shadow-xl">
+  <div className="flex items-start gap-4">
+    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
+      <Phone className="w-6 h-6 text-blue-600" />
+    </div>
+    <div>
+      <h4 className="text-gray-800 mb-2">Call Us</h4>
+      <a 
+        href="tel:+31649144629" 
+        className="text-gray-600 hover:text-blue-600 transition-colors"
+      >
+        +31 6 49144629
+      </a>
+    </div>
+  </div>
+</div>
 
                   {/* <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group cursor-pointer animate-scale-in animation-delay-400 shadow-lg hover:shadow-xl">
                     <div className="flex items-start gap-4">
