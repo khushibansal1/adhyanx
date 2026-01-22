@@ -130,6 +130,15 @@ export default function Footer({ onNavigate }: FooterProps) {
                   </a>
                 </div>
               </div>
+              <div className="flex items-start space-x-3">
+                <Phone className="h-5 w-5 text-yellow-400 mt-0.5" />
+                <div>
+                  <div className="text-sm font-medium text-white">Contact Number</div>
+                  <div className="text-gray-300">
+                    +31 6 49144629<br />
+                  </div>
+                </div>
+              </div>
               
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-yellow-400 mt-0.5" />
