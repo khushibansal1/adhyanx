@@ -135,7 +135,9 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <div>
                   <div className="text-sm font-medium text-white">Contact Number</div>
                   <div className="text-gray-300">
-                    +31 6 49144629<br />
+                   <a href="tel:+31649144629">
+                      +31 6 49144629
+                    </a><br />
                   </div>
                 </div>
               </div>
