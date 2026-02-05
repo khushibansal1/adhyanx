@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Home -->
   <url>
     <loc>https://adhyanx.com/</loc>
     <lastmod>2026-02-05</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
 
+  <!-- Testimonials -->
   <url>
-    <loc>https://adhyanx.com/about</loc>
+    <loc>https://adhyanx.com/testimonials</loc>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
 
+  <!-- Pricing -->
+  <url>
+    <loc>https://adhyanx.com/pricing</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://adhyanx.com/faq</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Contact -->
   <url>
     <loc>https://adhyanx.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
   </url>
 
 </urlset>
