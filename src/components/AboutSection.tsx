@@ -29,7 +29,8 @@ export default function AboutSection() {
               
               <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                 <p className="animate-fade-in-up animation-delay-600">
-                  We are a team of <span className="text-yellow-400 font-semibold">passionate educators</span> helping high schoolers across the Netherlands succeed — in school and beyond. Whether you’re preparing for exams, tackling tough subjects, or aiming for top grades, we’re here to guide you.
+                  We are a team of <span className="text-yellow-400 font-semibold">passionate educators</span> providing professional <span className="text-yellow-400 font-semibold">IB and Dutch high school tutoring</span>  in the Netherlands. We support students in <span className="text-yellow-400 font-semibold">VMBO, HAVO, VWO, and IB Diploma programs</span>, helping them succeed in Mathematics, Physics, and Chemistry.
+                  
                 </p>
                 
                 <p className="animate-fade-in-up animation-delay-800">
