@@ -22,21 +22,20 @@ export default function HeroSection() {
               
 
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-up animation-delay-400">
-                Unlock Your{' '}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-up animation-delay-400">
+                Expert IB & Dutch High School Tutoring in{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-800">
-                  Full Potential
+                  Math, Physics & Chemistry
                 </span>{' '}
-                with AdhyanX Guidance
               </h1>
+
               
-              <p className="text-xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-600">
-                Whether you're struggling with math formulas, prepping for final exams, or just need help staying on top of your homework — AdhyanX is here to guide you.
-              </p>
+              <h2 className="text-xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-600">
+                Personalized guidance for IB Diploma, VMBO, HAVO, and VWO students — from brugklas to final exams.
+              </h2>
               
               <div className="flex items-center space-x-2 text-lg font-medium text-yellow-700 animate-fade-in-up animation-delay-800">
-                <span>🎓</span>
-                <span>Helping students succeed — from brugklas to final exams!</span>
+                Structured tutoring that helps students excel in exams and gain confidence.
               </div>
             </div>
 {/*             
