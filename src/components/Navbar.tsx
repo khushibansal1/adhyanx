@@ -45,7 +45,7 @@ const [showPromo, setShowPromo] = useState(true);
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="nav-desktop hidden items-center space-x-8">
             <button 
               onClick={() => handleNavigation('home')}
               className={`font-medium transition-colors duration-200 relative group ${
@@ -56,6 +56,22 @@ const [showPromo, setShowPromo] = useState(true);
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-yellow-400 transition-all duration-300 ${
                 currentPage === 'home' ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></span>
+            </button>
+            <button 
+              onClick={() => {
+                if (currentPage !== 'home') {
+                  onNavigate('home');
+                  setTimeout(() => {
+                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                } else {
+                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="font-medium transition-colors duration-200 relative group text-gray-300 hover:text-yellow-400"
+            >
+              Services
+              <span className="absolute -bottom-1 left-0 h-0.5 bg-yellow-400 transition-all duration-300 w-0 group-hover:w-full"></span>
             </button>
             
             <button 
@@ -108,14 +124,14 @@ const [showPromo, setShowPromo] = useState(true);
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="nav-desktop hidden items-center space-x-4">
             <button onClick={() => onNavigate('contact', 'demo')} className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-2.5 rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
               Book a demo Session
             </button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="nav-hamburger hidden">
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-yellow-400 focus:outline-none transition-colors duration-200"
@@ -126,7 +142,7 @@ const [showPromo, setShowPromo] = useState(true);
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`nav-hamburger-menu lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="py-4 pb-6 space-y-3 border-t border-yellow-500/30">
             <button 
               onClick={() => handleNavigation('home')}

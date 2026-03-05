@@ -57,7 +57,7 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
 
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100 relative overflow-hidden" id='services'>
       {/* Clean background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-yellow-500/5 via-transparent to-yellow-500/5"></div>
@@ -71,9 +71,9 @@ export default function ServicesSection({ onNavigate }: ServiceSectionProps) {
           </div>
            */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-up animation-delay-400">
-            What Do We{' '}
+            Our{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-800">
-              Offer?
+              Services
             </span>
           </h2>
           

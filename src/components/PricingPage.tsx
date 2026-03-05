@@ -93,7 +93,7 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
               </p>
 
               {/* Key Benefits Preview */}
-              <div className="grid md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-600">
+              <div className="pricing-grids grid md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-600">
                 <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20 shadow-lg">
                   <Calendar className="h-8 w-8 text-yellow-600 mx-auto mb-3" />
                   <h3 className="font-semibold text-gray-800 mb-2">Flexible Scheduling</h3>
