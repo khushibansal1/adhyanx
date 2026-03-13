@@ -152,7 +152,23 @@ const [showPromo, setShowPromo] = useState(true);
             >
               Home
             </button>
-            
+            <button 
+              onClick={() => {
+                if (currentPage !== 'home') {
+                  onNavigate('home');
+                  setTimeout(() => {
+                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                } else {
+                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                }
+                setIsMenuOpen(false);
+              }}
+              className="block w-full text-left font-medium py-2 transition-colors duration-200 text-gray-300 hover:text-yellow-400"
+            >
+              Services
+            </button>
+                        
             <button 
               onClick={() => handleNavigation('testimonials')}
               className={`block w-full text-left font-medium py-2 transition-colors duration-200 ${

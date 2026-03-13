@@ -1,6 +1,7 @@
 import { Plus, Minus } from 'lucide-react';
 import { useState } from 'react';
 import FloatingInfo from './FloatingInfo';
+import FloatingContactButtons from './FloatingContactButtons';
 interface FAQPageProps {
   onNavigate: (page: string, planType?: string) => void;
 }
@@ -286,6 +287,7 @@ export default function FAQPage({onNavigate }: FAQPageProps) {
           </div>
         </div>
         <FloatingInfo />
+        <FloatingContactButtons />
       </section>
     </div>
   );

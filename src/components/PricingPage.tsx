@@ -1,5 +1,6 @@
 import { Check, Star, Users, Target, Crown, MessageSquare, Calendar, BarChart3 } from 'lucide-react';
 import FloatingInfo from './FloatingInfo';
+import FloatingContactButtons from './FloatingContactButtons';
 
 interface PricingPageProps {
   onNavigate: (page: string, planType?: string) => void;
@@ -15,9 +16,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
       description: "Establish strong learning outcomes",
       features: [
         "1-on-1 session",
-        "1 session per week",
+        "1 hour per week",
         "€35 per session",
-        "60 minutes duration", 
         "Standard learning plan",
         "General goals"
       ],
@@ -32,9 +32,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
       description: "Ideal for consistent academic progress",
       features: [
         "1-on-1 session",
-        "2 sessions per week",
+        "2 hours per week",
         "€30 per session: You save 15%",
-        "60 minutes duration",
         "Customised learning plan",
         "Specific goals",
         "Free trial session",
@@ -51,9 +50,8 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
       description: "For dedicated learners seeking excellence",
       features: [
         "1-on-1 session",
-        "3 sessions per week",
+        "3 hours per week",
         "€25 per session: You save 30%",
-        "60 minutes duration", 
         "Fully Tailored Curriculum",
         "Targeted outcomes",
         "Free trial session", 
@@ -272,6 +270,7 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
           </div>
         </div>
         <FloatingInfo />
+        <FloatingContactButtons />
       </section>
     </div>
   );

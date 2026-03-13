@@ -2,6 +2,7 @@ import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ServicesSection from './ServicesSection';
 import FloatingInfo from './FloatingInfo';
+import FloatingContactButtons from './FloatingContactButtons';
 interface HomePageProps {
   onNavigate: (page: string, planType?: string) => void;
 }
@@ -11,6 +12,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       <HeroSection />
       <AboutSection />
       <ServicesSection onNavigate={onNavigate} />
+      <FloatingContactButtons />
     </div>
   );
 }

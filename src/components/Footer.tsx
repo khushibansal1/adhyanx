@@ -115,7 +115,35 @@ export default function Footer({ onNavigate }: FooterProps) {
                 </div>
               </div>
             </div>
+            {/* LinkedIn */}
+<div className="pt-4 border-t border-yellow-500/30">
+  <h4 className="text-sm font-medium text-white mb-3">Connect With Us</h4>
+
+  <a
+    href="https://www.linkedin.com/company/adhyanx/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center space-x-3 p-3 bg-blue-500/20 rounded-lg border border-blue-500/30 hover:bg-blue-500/30 transition-colors duration-200"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="h-5 w-5"
+    aria-label="LinkedIn"
+  >
+    <rect width="24" height="24" rx="4" fill="#0A66C2" />
+    <path
+      d="M7.75 9.5H5.25V18h2.5V9.5ZM6.5 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18.75 18h-2.5v-4.25c0-1.1-.9-2-2-2s-2 .9-2 2V18h-2.5V9.5h2.5v1.1a3.5 3.5 0 0 1 2.75-1.35c1.8 0 3.25 1.45 3.25 3.25V18Z"
+      fill="white"
+    />
+  </svg>
+  <span className="text-gray-300 hover:text-white">
+    Follow us on LinkedIn
+  </span>
+</a>
+</div>
           </div>
+          
 
           {/* Contact Info */}
           <div className="space-y-6">
@@ -160,6 +188,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   </div>
                 </div>
               </div>
+              
               
               {/* <div className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-yellow-400 mt-0.5" />

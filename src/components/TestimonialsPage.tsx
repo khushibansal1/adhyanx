@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'sonner@2.0.3';
 import FloatingInfo from './FloatingInfo';
+import FloatingContactButtons from './FloatingContactButtons';
 
 interface Testimonial {
   _id: string;
@@ -601,6 +602,7 @@ const handleDelete = async (_id: string) => {
           </div>
         </div>
         <FloatingInfo />
+        <FloatingContactButtons />
       </section>
     </div>
   );
